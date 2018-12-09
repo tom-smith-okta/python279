@@ -1,5 +1,11 @@
-# build command:
-# docker build -t tomsmithokta/python:2.7.9 .
+# to build
+# docker build -t tomsmithokta/python279 .
+
+# to run
+# docker run -it tomsmithokta/python279
+
+# to test
+# python hello.py
 
 FROM ubuntu:18.04
 
@@ -29,3 +35,5 @@ RUN make install
 WORKDIR /
 
 RUN rm -rf Python-2.7.9.tgz
+
+RUN echo "print('hello')" > hello.py
